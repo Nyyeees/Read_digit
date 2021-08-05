@@ -13,7 +13,8 @@ from sklearn.model_selection import train_test_split
 import pickle
 import PIL
 import matplotlib.pyplot as plt
-
+#Trained with dataset from: http://yann.lecun.com/exdb/mnist/
+#CSV file too big to upload, but i upload this anyway.
 d = pd.read_csv('mnist_train.csv')
 label = d['label']
 data = d.drop('label', axis=1)
