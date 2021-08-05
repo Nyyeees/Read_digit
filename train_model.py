@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 #Trained with dataset from: http://yann.lecun.com/exdb/mnist/
-#CSV file too big to upload, but i upload this anyway.
+#CSV files are too big to upload, putting this here for future reference.
 d = pd.read_csv('mnist_train.csv')
 label = d['label']
 data = d.drop('label', axis=1)
