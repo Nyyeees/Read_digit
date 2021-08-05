@@ -27,7 +27,7 @@ def predict():
     #Process img
     image = Image.open(io.BytesIO(decode_image)).convert('L')
     cropped_img = image.crop(image.getbbox())
-    expanded_img = ImageOps.expand(cropped_img, border = 40).filter(ImageFilter.BLUR)
+    expanded_img = ImageOps.expand(cropped_img, border = 60).filter(ImageFilter.BLUR)
     processed_img = expanded_img.resize((28,28),Image.LANCZOS)
     to_array = np.array(processed_img, dtype=np.float32).reshape(1,28,28,1)
     to_array /= 255
