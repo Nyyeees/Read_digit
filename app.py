@@ -36,6 +36,6 @@ def predict():
     print(result)
     return str(result)
 
-app.run(port=5000)
+
 
 
