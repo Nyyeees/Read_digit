@@ -1,18 +1,13 @@
-import keras
-from keras.backend import softmax
 from keras.layers import Flatten
 from keras.layers.pooling import MaxPooling2D
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.layers import MaxPool2D, Conv2D
-from keras.utils import np_utils
+from keras.layers import Conv2D
 import tensorflow as tf
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-import pickle
-import PIL
-import matplotlib.pyplot as plt
+
 #Trained with dataset from: http://yann.lecun.com/exdb/mnist/
 #CSV file too big to upload, but i upload this anyway.
 d = pd.read_csv('mnist_train.csv')
