@@ -6,7 +6,7 @@ import re
 import io
 from PIL import Image, ImageFilter,ImageOps
 import numpy as np
-from tensor_m import model
+from load_model import model
 
 app = Flask(__name__)
 
@@ -31,6 +31,5 @@ def home():
        
     return render_template('index.html', template_result = result)
 
-app.run(port=5000)
 
 
