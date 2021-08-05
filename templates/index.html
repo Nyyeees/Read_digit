@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <title>Canvas</title>
+    <link href='../static/style.css' rel='stylesheet'>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body id='body'>
+
+    <nav>
+        <div class="navbar">
+        <i class='bx bx-menu'></i>
+            <div class='home'><a href='/'>Bruh</a></div>
+                <div class='nav-links'>
+                    <ul class='links'>
+                        <li class = 'drop-container'><a href='#'><box-icon name='menu' class='icon'></box-icon></a>
+                            <ul class='drop-menu'>
+                                <div class='info-container'>
+                                <li><a href='#'>Bruh</a></li>
+                                <li><a href='#'>Bruh</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class='canvas-container'>
+        <div class='title'>
+        <h2>Draw a digit</h2>
+        </div>
+        <canvas id='canvas'></canvas>
+        <div class='buttons'>
+        <button class='predict'>Predict</button>
+        <button class='clear'>Clear</button> 
+        <p class='data'>{{ template_result }}</p>
+        </div>
+    </div>
+    <script src='../static/canvas.js'></script>
+</body>
+</html>
