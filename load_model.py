@@ -1,3 +1,3 @@
 import tensorflow as tf
 
-model = tf.keras.models.load_model('CNN_model.h5')
+model = tf.keras.models.load_model('Trained_model.h5')
