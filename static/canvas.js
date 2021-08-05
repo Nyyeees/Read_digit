@@ -14,8 +14,8 @@ window.addEventListener('load', () => {
     const canvas = document.querySelector('canvas');  
     const ctx = canvas.getContext('2d');
     //canvas size
-    canvas.width = 210;
-    canvas.height = 200;
+    canvas.width = 310;
+    canvas.height = 300;
     canvas.style.top = 20;
     ctx.fillStyle = 'black';
     ctx.fillRect(0,0,canvas.width,canvas.height);
