@@ -32,12 +32,17 @@ X_test_reshape = np.array(X_test).reshape(X_test.shape[0],28,28,1)
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
 model = Sequential()
-model.add(Conv2D(64,(3,3),strides=1, input_shape= X_test_reshape.shape[1:], activation='relu'))
+model.add(Conv2D(128,(3,3),strides=1, input_shape= X_test_reshape.shape[1:], activation='relu'))
 model.add(MaxPooling2D(pool_size=(2,2),strides=1))
-model.add(Conv2D(64,(3,3),strides=1,activation='relu'))
+model.add(Conv2D(128,(3,3),strides=1,activation='relu'))
 model.add(MaxPooling2D(pool_size=(2,2),strides=1))
-model.add(Conv2D(64,(3,3),strides=1,activation='relu'))
+model.add(Conv2D(128,(3,3),strides=1,activation='relu'))
 model.add(MaxPooling2D(pool_size=(2,2),strides=1))
+model.add(Conv2D(128,(3,3),strides=1,activation='relu'))
+model.add(MaxPooling2D(pool_size=(2,2),strides=1))
+model.add(Conv2D(128,(3,3),strides=1,activation='relu'))
+model.add(MaxPooling2D(pool_size=(2,2),strides=1))
+model.add(Dropout(0.2))
 model.add(Flatten())
 model.add(Dense(64, activation='relu'))
 model.add(Dense(32, activation='relu'))
@@ -45,9 +50,9 @@ model.add(Dense(10, activation='softmax'))
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 model.summary()
-model.fit(X_train_reshape, y_train, epochs=5,verbose=1,validation_split=0.3)
+model.fit(X_train_reshape, y_train, epochs=5,verbose=1,validation_split=0.2)
 
-model.save('CNN_model.h5')
+model.save('Trained_model.h5')
 
 
 
